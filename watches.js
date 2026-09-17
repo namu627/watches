@@ -13,10 +13,10 @@ const WATCHES = [
     base: 'assets/jlc',
     hasDate: true,
     centers: {
-      hour:   { x: 0.5010, y: 0.4336 },
-      minute: { x: 0.5015, y: 0.4336 },
-      second: { x: 0.5010, y: 0.4326 },
-      date:   { x: 0.4998, y: 0.5185 }
+      hour:   { x: 0.5022, y: 0.4162 },
+      minute: { x: 0.5022, y: 0.4140 },
+      second: { x: 0.5022, y: 0.4129 },
+      date:   { x: 0.5022, y: 0.5272 }
     },
     originAngle: { hour: 302.91, minute: 52.28, second: 247.35, date: 200.91 },
     dateZero: 4,
