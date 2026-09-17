@@ -1,4 +1,4 @@
-# 포트폴리오용 랜덤 시계
+# 웹사이트용 랜덤 시계
 
 새로고침/접속마다 등록된 시계 중 **랜덤 1점**이 실시간으로 움직입니다.
 
@@ -7,7 +7,7 @@
 watches/
 ├─ clock.js            공용 시계 엔진 (config 받아 렌더, 초침 스무스)
 ├─ watches.js          시계 목록(config 배열) — 여기에 시계 등록
-├─ embed-example.html  포트폴리오에 넣을 최소 예제
+├─ embed-example.html  웹사이트에 넣을 최소 예제
 ├─ calibrate.html      새 시계 축·각도 보정 도구
 └─ assets/
    ├─ jlc/    body / hour / minute / second / date .png   ← 시계1 (완성)
@@ -15,7 +15,7 @@ watches/
    └─ watch3/ (준비되면 5장)
 ```
 
-## 포트폴리오에 심기
+## 웹사이트에 심기
 페이지에 이 부분만 넣으면 됩니다(경로는 실제 배치에 맞게):
 ```html
 <div id="watchSlot" style="width:min(72vw,340px)"></div>

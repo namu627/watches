@@ -42,7 +42,7 @@ const WATCHES = [
     base: 'assets/gs',
     hasDate: false,           
     centers: {
-      hour:   { x: 0.4822, y: 0.4268 },
+      hour:   { x: 0.4824, y: 0.4254 },
       minute: { x: 0.4822, y: 0.4268 },
       second: { x: 0.4822, y: 0.4268 },
     },
