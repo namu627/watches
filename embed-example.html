@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watch embed 예제</title>
+<style>
+  body{margin:0;min-height:100dvh;display:grid;place-items:center;background:#fff;font-family:system-ui,sans-serif}
+  /* 시계가 들어갈 자리 — 크기는 이 컨테이너 width로 조절 */
+  #watchSlot{width:min(72vw,340px)}
+  .name{margin-top:14px;text-align:center;color:#8a8a8a;font-size:13px}
+</style>
+</head>
+<body>
+
+  <!-- ↓↓↓ 포트폴리오 페이지에 넣을 부분은 이 3줄이 전부 ↓↓↓ -->
+  <div>
+    <div id="watchSlot"></div>
+    <div class="name" id="watchName"></div>
+  </div>
+
+  <script src="clock.js"></script>
+  <script src="watches.js"></script>
+  <script>
+    // 접속/새로고침마다 랜덤으로 1점 선택
+    var pick = WATCHES[Math.floor(Math.random() * WATCHES.length)];
+    mountWatch(document.getElementById('watchSlot'), pick);
+    document.getElementById('watchName').textContent = pick.name;  // 이름 표시 (선택)
+  </script>
+  <!-- ↑↑↑ 여기까지 ↑↑↑ -->
+
+</body>
+</html>

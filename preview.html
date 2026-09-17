@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>시계 미리보기</title>
+<style>
+  body{margin:0;min-height:100dvh;display:grid;place-items:center;background:#fff;font-family:system-ui,sans-serif}
+  #slot{width:min(80vw,420px)}
+  .name{margin-top:14px;text-align:center;color:#8a8a8a;font-size:13px}
+  .err{color:#c0392b;font-size:13px;text-align:center;max-width:80vw}
+</style>
+</head>
+<body>
+  <div>
+    <div id="slot"></div>
+    <div class="name" id="name"></div>
+    <div class="err" id="err"></div>
+  </div>
+
+  <script src="clock.js"></script>
+  <script src="watches.js"></script>
+  <script>
+    // 보여줄 시계 지정:  preview.html?id=jlc-master-moon
+    // id를 안 주면 목록의 첫 번째(=JLC)를 항상 표시.
+    var id = new URLSearchParams(location.search).get('id');
+    var w = id ? WATCHES.find(function(x){return x.id===id;}) : WATCHES[0];
+    if(!w){ document.getElementById('err').textContent='해당 id의 시계를 찾을 수 없습니다: '+id; }
+    else {
+      mountWatch(document.getElementById('slot'), w);
+      document.getElementById('name').textContent = w.name;
+    }
+  </script>
+</body>
+</html>
