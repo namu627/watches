@@ -24,7 +24,7 @@
     container.innerHTML = '';
     const stage = document.createElement('div');
     stage.className = 'watch-stage';
-    stage.style.cssText = 'position:relative;width:100%;aspect-ratio:1/1;user-select:none;';
+    stage.style.cssText = 'position:relative;width:100%;aspect-ratio:1/1;user-select:none;overflow:hidden;';
 
     const Z = { body: 1, date: 2, hour: 3, minute: 4, second: 5 };
     const layers = {};
